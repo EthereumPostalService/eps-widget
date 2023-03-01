@@ -1,6 +1,8 @@
 # eps-widget
 
 - Note: Storybook is not working due to "Field 'browser' doesn't contain a valid alias configuration" and some other strange errors where Etheres is exporting BigNumber.
+- Note: Wagmi should be installed by the repository owner.
+- Depends on ethersv5 rather tha v6 due to a nasty wagmi bug.
 
 # todo
 
