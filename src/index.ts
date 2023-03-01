@@ -1,1 +1,2 @@
-export * from "./components/Widget";
+export * from "./components/EPSWidget";
+export * from "./components/EPSMailForm";

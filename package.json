@@ -32,10 +32,21 @@
   },
   "peerDependencies": {
     "react": "18.x",
-    "react-dom": "18.x"
+    "react-dom": "18.x",
+    "wagmi": "^0.11.7"
   },
   "dependencies": {
-    "classnames": "^2.3.2"
+    "@dynamic-labs/sdk-react": "^0.14.36",
+    "@dynamic-labs/wagmi-connector": "^0.14.36",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.11",
+    "classnames": "^2.3.2",
+    "eciesjs": "^0.3.16",
+    "ethers": "5.7.2",
+    "iso-3166-1": "^2.1.1",
+    "rollup-plugin-typescript2": "^0.34.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -52,6 +63,8 @@
     "@popperjs/core": "^2.11.6",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-image": "^3.0.2",
+    "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^9.0.1",
     "@rollup/plugin-url": "^8.0.1",
@@ -122,6 +135,7 @@
     "ts-toolbelt": "^9.6.0",
     "typescript": "^4.9.4",
     "url-loader": "^4.1.1",
+    "wagmi": "^0.11.7",
     "webpack": "^5.75.0",
     "yarn-audit-fix": "^9.3.8"
   },
@@ -135,6 +149,7 @@
     "trim": "^0.0.3",
     "postcss": "^8.4.17",
     "loader-utils": "^1.4.1",
-    "json5": "^1.0.2"
+    "json5": "^1.0.2",
+    "wagmi": "^0.11.7"
   }
 }
