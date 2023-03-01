@@ -7,6 +7,7 @@
 # todo
 
 - [ ] Still requires the downloader self host the `eps-logo.png` image. This is a problem.
+- [ ] Fix nextjs consumer build errors cannot find (lokijs / encoding / pino-pretty)
 
 # Credits
 
