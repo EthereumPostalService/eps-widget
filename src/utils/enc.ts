@@ -1,4 +1,4 @@
-import { encrypt as encryptEcies, decrypt as decryptEcies, PrivateKey } from 'eciesjs';
+import { encrypt as encryptEcies, decrypt as decryptEcies } from 'eciesjs';
 
 export function encrypt(data: string, pubkey: string): string {
     return encryptEcies(pubkey, Buffer.from(data)).toString('hex');
@@ -17,10 +17,6 @@ export function encryptAddress(address: Address, pubkey: string): Address {
 
 export function decrypt(data: string, seckey: string): string {
     return decryptEcies(seckey, Buffer.from(data)).toString();
-}
-
-export function genPrivateKey(): PrivateKey {
-    return new PrivateKey();
 }
 
 export interface Address {
