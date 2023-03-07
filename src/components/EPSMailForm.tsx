@@ -27,7 +27,12 @@ export interface FormProps {
     defaultEncryptedAddress?: Address;
 }
 
-export const EPSMailForm = (props: FormProps) => {
+/**
+ * Form only for mailing from EPS. Assumes page has already handeled wallet connection and injection.
+ * @param address (Optional) Address of the EthereumPostalService contract (will default to 0x2156fcCff55637317D211B62318007309378fB95).
+ * @param defaultEncryptedAddress (Optional) Default reciever address. If supplied, address fields in the form will not be shown.
+ */
+export function EPSMailForm(props: FormProps) {
     const feeRead = useContractRead({
         address: props.address,
         abi: abi.abi,

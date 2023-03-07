@@ -15,6 +15,7 @@
 - [x] Fix storyboard for local testing without install
 - [ ] Comments for hover on EPSWidget / EPSMailForm 
 - [ ] Good readme
+- [ ] Show default encrypted address in the widget
 - [ ] Bundle strategy for images
 - [ ] Still requires the downloader self host the `eps-logo.png` image. This is a problem.
 - [ ] Fix nextjs consumer build errors cannot find (lokijs / encoding / pino-pretty)
