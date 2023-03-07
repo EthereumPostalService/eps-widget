@@ -1,3 +1,6 @@
+// @ts-ignore
+import React from 'react';
+
 import { FC } from 'react';
 import { Meta } from '@storybook/react';
 
