@@ -32,15 +32,6 @@ There are two optional parameters
 - `yarn start` will spin up [storybook](https://storybook.js.org/) at localhost:6060
 - `yarn build` will package into `./dist`
 
-# todo
-
-- [x] Fix storyboard for local testing without install
-- [x] Comments for hover on EPSWidget / EPSMailForm 
-- [x] Good readme
-- [x] Grid container issue
-- [x] Bundle strategy for images
-- [ ] Fix nextjs consumer build errors cannot find (lokijs / encoding / pino-pretty)
-
 # Credits
 
 - From [KaiHotz template](https://github.com/KaiHotz/react-rollup-boilerplate)
