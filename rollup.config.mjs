@@ -27,6 +27,7 @@ const config = {
   external: ["wagmi", "@mui/material"],
   plugins: [
     peerDepsExternal(),
+    image({dom: true}),
     postcss({
       plugins: [],
       minimize: true,
@@ -46,8 +47,7 @@ const config = {
       exclude: /node_modules/,
     }),
     url(),
-    svgr(),
-    image(),
+    // svgr(),
     resolve({ extensions: [".ts", ".js"], browser: true }),
     terser(),
     json(),
