@@ -24,7 +24,7 @@ const config = {
       sourcemap: false,
     },
   ],
-  external: ["wagmi"],
+  external: ["wagmi", "@mui/material"],
   plugins: [
     peerDepsExternal(),
     postcss({
