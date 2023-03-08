@@ -27,7 +27,7 @@ const config = {
   external: ["wagmi", "@mui/material"],
   plugins: [
     peerDepsExternal(),
-    image({dom: true}),
+    image(),
     postcss({
       plugins: [],
       minimize: true,
