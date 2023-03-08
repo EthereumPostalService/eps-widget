@@ -2,7 +2,7 @@
 React widget to be installed within other React applications for interacting with The Ethereum Postal Service.
 
 ```sh
-    yarn add https://github.com/EthereumPostalService/eps-widget
+    yarn add wagmi https://github.com/EthereumPostalService/eps-widget 
 ```
 
 ## Usage
