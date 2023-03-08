@@ -22,8 +22,8 @@ const darkTheme = createTheme({
 const DEFAULT_ADDRESS = "0x2156fcCff55637317D211B62318007309378fB95";
 
 export interface EPSWidgetProps {
-    address?: `0x${string}`;
-    defaultEncryptedAddress?: Address;
+    contractAddress?: `0x${string}`;
+    encryptedDestination?: Address;
 }
 
 /**
@@ -64,8 +64,8 @@ export function EPSWidget(props: EPSWidgetProps) {
                             <CardMedia component="img" image={"/eps-logo.png"} title="eps-logo" style={{ padding: "5%" }} />
                             <CardContent>
                                 <EthMailForm
-                                    address={props.address ? props.address! : DEFAULT_ADDRESS}
-                                    defaultEncryptedAddress={props.defaultEncryptedAddress}
+                                    contractAddress={props.contractAddress ? props.contractAddress ! : DEFAULT_ADDRESS}
+                                    encryptedDestination={props.encryptedDestination}
                                 />
                             </CardContent>
                         </Card>

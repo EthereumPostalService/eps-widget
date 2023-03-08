@@ -23,8 +23,8 @@ import { formatEther } from 'ethers/lib/utils.js';
 
 
 export interface FormProps {
-    address: `0x${string}`;
-    defaultEncryptedAddress?: Address;
+    contractAddress: `0x${string}`;
+    encryptedDestination?: Address;
 }
 
 /**
@@ -34,13 +34,13 @@ export interface FormProps {
  */
 export function EPSMailForm(props: FormProps) {
     const feeRead = useContractRead({
-        address: props.address,
+        address: props.contractAddress,
         abi: abi.abi,
         functionName: "getPostageWei",
         watch: true,
     });
     const encryptionRead = useContractRead({
-        address: props.address,
+        address: props.contractAddress,
         abi: abi.abi,
         functionName: "encryptionPubKey",
         watch: true,
@@ -151,9 +151,9 @@ export function EPSMailForm(props: FormProps) {
 
 
     let sendAddress: Address;
-    if (props.defaultEncryptedAddress) {
+    if (props.encryptedDestination) {
         // TODO: Allow updating name here?
-        sendAddress = props.defaultEncryptedAddress!;
+        sendAddress = props.encryptedDestination!;
     } else if (encryptAdd) {
         sendAddress = addressEnc!;
     } else {
@@ -167,7 +167,7 @@ export function EPSMailForm(props: FormProps) {
         }
     }
     const { config } = usePrepareContractWrite({
-        address: props.address,
+        address: props.contractAddress,
         abi: abi.abi,
         functionName: "sendEncryptedMail",
         args: [
@@ -186,7 +186,7 @@ export function EPSMailForm(props: FormProps) {
     });
 
     const submitForm = () => {
-        if (props.defaultEncryptedAddress || allValid()) {
+        if (props.encryptedDestination || allValid()) {
             write?.();
         } else {
             setAttempted(true);
@@ -197,7 +197,7 @@ export function EPSMailForm(props: FormProps) {
             <Grid container spacing={2}>
 
                 {
-                    !props.defaultEncryptedAddress ?
+                    !props.encryptedDestination ?
                         <>
                             <Grid item xs={12} direction="row">
                                 <FormControlLabel
