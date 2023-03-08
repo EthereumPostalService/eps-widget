@@ -37,7 +37,7 @@ There are two optional parameters
 - [x] Fix storyboard for local testing without install
 - [x] Comments for hover on EPSWidget / EPSMailForm 
 - [x] Good readme
-- [ ] Grid container issue
+- [x] Grid container issue
 - [ ] Show default encrypted address in the widget
 - [ ] Bundle strategy for images
 - [ ] Still requires the downloader self host the `eps-logo.png` image. This is a problem.
