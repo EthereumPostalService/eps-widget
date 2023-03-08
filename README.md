@@ -38,8 +38,7 @@ There are two optional parameters
 - [x] Comments for hover on EPSWidget / EPSMailForm 
 - [x] Good readme
 - [x] Grid container issue
-- [ ] Bundle strategy for images
-- [ ] Still requires the downloader self host the `eps-logo.png` image. This is a problem.
+- [x] Bundle strategy for images
 - [ ] Fix nextjs consumer build errors cannot find (lokijs / encoding / pino-pretty)
 
 # Credits
