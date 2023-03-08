@@ -3,7 +3,6 @@ import React from 'react';
 
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import { Box } from "@mui/material";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
@@ -12,6 +11,8 @@ import { DynamicWagmiConnector } from "@dynamic-labs/wagmi-connector";
 
 import { Address } from '../utils/enc';
 import EthMailForm from "./EPSMailForm";
+
+import logo from "../resources/eps-logo.png";
 
 const darkTheme = createTheme({
     palette: {
@@ -61,7 +62,11 @@ export function EPSWidget(props: EPSWidgetProps) {
                                     }
                                 />
                             </Box>
-                            <CardMedia component="img" image={"/eps-logo.png"} title="eps-logo" style={{ padding: "5%" }} />
+
+                            <div style={{margin: "5%"}}>
+                                <img src={logo} alt="eps-logo" style={{ objectFit: "scale-down", width: "100%"}}/>
+                            </div>
+
                             <CardContent>
                                 <EthMailForm
                                     contractAddress={props.contractAddress ? props.contractAddress ! : DEFAULT_ADDRESS}
