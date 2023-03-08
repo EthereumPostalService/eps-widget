@@ -199,7 +199,7 @@ export function EPSMailForm(props: FormProps) {
                 {
                     !props.encryptedDestination ?
                         <>
-                            <Grid item xs={12} direction="row">
+                            <Grid item xs={12}>
                                 <FormControlLabel
                                     control={
                                         <Checkbox
