@@ -22,12 +22,35 @@ export function someContainer() {
 }
 ```
 
-Two optional parameters
+### Optional Parameters
 
 - `contractAddress` – if not supplied, defaults to EPS (`0x2156fcCff55637317D211B62318007309378fB95`)
 - `encryptedDestination` – if supplied, only displays message fields, sends all postage to the encrypted address
 
-`TODO(sragss): how to run script for encryption of a destination`
+### Destination pre-encryption
+
+The most common usecase of widget will be to allow website users to send postage to the website owner without knowing the owner's address. This can be enabled by pre-encrypting the address and passing the encrypted postal address into the widget.
+
+To pre-encrypt a destination address:
+
+```sh
+    yarn add https://github.com/EthereumPostalService/eps-scripts --save-dev
+    ts-node ./node_modules/eps-scripts/encrypt-interactive.ts -r <rpc url>
+```
+
+Then pass the value to the widget.
+
+```tsx
+import { EPSWidget } from 'eps-widget';
+
+export function someContainer() {
+    return (
+        <div>
+            <EPSWidget encryptedDestination={"<encrypted address>"}></EPSWidget>
+        <div>
+    )
+}
+```
 
 # Local dev
 
