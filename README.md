@@ -62,3 +62,4 @@ export function someContainer() {
 - Wagmi should be installed by the repository owner (peer dependencies)
 - Depends on ethers v5 rather than v6 due to Wagmi
 - Node 18 can cause build failures: `export NODE_OPTIONS=--openssl-legacy-provider`
+- Package includes a "prepare" script to build which runs every time there is an install from Github. This can complicate. Consider including a pre-built ./dist.
