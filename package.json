@@ -25,6 +25,7 @@
     "storybook:build": "rimraf dist && build-storybook",
     "build": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
     "audit:fix": "npx yarn-audit-fix",
+    "prepare": "npm run build",
     "release": "npm run publish",
     "predeploy": "yarn storybook:build",
     "deploy": "gh-pages -d storybook-static"
