@@ -136,6 +136,11 @@ export function EPSMailForm(props: FormProps) {
         return !!msg;
     };
     const allValid = () => {
+        if (props.encryptedDestination) {
+            return validMsg() && 
+                encryptionRead.isSuccess &&
+                feeRead.isSuccess
+        }
         return (
             validName() &&
             validAdd1() &&
@@ -186,7 +191,7 @@ export function EPSMailForm(props: FormProps) {
     });
 
     const submitForm = () => {
-        if (props.encryptedDestination || allValid()) {
+        if (allValid()) {
             write?.();
         } else {
             setAttempted(true);
